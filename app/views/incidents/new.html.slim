@@ -1,0 +1,20 @@
+= form_for @incident do |f|
+  = f.label :name
+  = f.text_field :name
+  br
+
+  = f.label :height
+  = f.text_field :height
+  br
+
+  = f.label :age
+  = f.text_field :age
+  br
+
+  = f.label :info
+  = f.text_field :info
+  br
+
+  = f.submit 'Send Text'
+
+  / , url: '/texty/send_text'
