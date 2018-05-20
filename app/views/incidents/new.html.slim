@@ -1,20 +1,45 @@
-= form_for @incident do |f|
-  = f.label :name
-  = f.text_field :name
-  br
-
-  = f.label :height
-  = f.text_field :height
-  br
-
-  = f.label :age
-  = f.text_field :age
-  br
-
-  = f.label :info
-  = f.text_field :info
-  br
-
-  = f.submit 'Send Text'
-
-  / , url: '/texty/send_text'
+.profile-user
+  .container
+    .col-md-8.offset-md-2.mt-2
+      .card.card-outline-secondary
+        .card-header.mt-2.mb-2
+          h3.mb-0 align='center'
+            | Fill the form, please!
+        .card-block
+          = form_for @incident do |f|
+            .form-group.row.ml-3.mr-3.ml-3.mr-3
+              label.col-lg-3.col-form-label.form-control-label Name
+              .col-lg-9
+                .input-group.indent-bottom
+                  span.input-group-addon
+                    i.fa.fa-info-circle aria-hidden='true'
+                  = f.text_field :name, autofocus: true, autocomplete: 'off', class: 'form-control'
+            hr
+            .form-group.row.ml-3.mr-3
+              label.col-lg-3.col-form-label.form-control-label Height
+              .col-lg-9
+                .input-group.indent-bottom
+                  span.input-group-addon
+                    i.fa.fa-info aria-hidden='true'
+                  = f.number_field :height, autofocus: true, autocomplete: 'off', class: 'form-control'
+            hr
+            .form-group.row.ml-3.mr-3
+              label.col-lg-3.col-form-label.form-control-label Age
+              .col-lg-9
+                .input-group.indent-bottom
+                  span.input-group-addon
+                    i.fa.fa-address-card aria-hidden='true'
+                  = f.number_field :info, autofocus: true, autocomplete: 'off', class: 'form-control'
+            hr
+            .form-group.row.ml-3.mr-3
+              label.col-lg-3.col-form-label.form-control-label Additional information
+              .col-lg-9
+                .input-group.indent-bottom
+                  span.input-group-addon
+                    i.fa.fa-birthday-cake aria-hidden='true'
+                  = f.text_area :info, autofocus: true, autocomplete: 'off', class: 'form-control'
+            .form-group.row
+              label.col-lg-4.col-form-label.form-control-label.ml-3
+              .col-lg-6
+                input.btn.btn-secondary.mr-2 type='reset' value='Reset'
+                input.btn.btn-success type='submit' value='Submit'

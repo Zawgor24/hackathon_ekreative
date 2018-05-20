@@ -1,16 +1,14 @@
 class UsersController < ApplicationController
-  before_action :find_user
+  before_action :find_user, only: [:show, :update, :edit, :destroy]
+  def index
+    @users = User.all
+  end
 
   def show
 
   end
 
-  def index
-    @users = User.all
-  end
-
   def edit
-
   end
 
   def update
@@ -33,6 +31,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:avatar, :email,
-      :first_name, :last_name, :password)
+      :first_name, :last_name, :password, :latitude, :longitude, :address)
   end
 end

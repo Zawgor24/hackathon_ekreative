@@ -1,10 +1,23 @@
-h1
-  hr
-  | Full name: #{full_name(@user)}
-  br
-  | Email: #{ @user.email }
-  br
-  | Phone: #{ @user.phone }
-  br
-  | Info: #{ @user.info }
-  br/
+.profile-user
+  .container
+    .row.profile
+      .col-md-3
+        .profile-sidebar
+          .profile-userpic
+            = image_tag(@user.avatar_url) if @user.avatar.present?
+          .profile-usertitle
+            .profile-usertitle-name
+              = full_name(@user)
+
+      .col-md-9
+        .profile-content
+          h3
+            hr
+            = "Full name: #{full_name(@user)}"
+            br
+            | Email: #{ @user.email }
+            br
+            | Phone: #{ @user.phone }
+            br
+            | Info: #{ @user.info }
+            hr

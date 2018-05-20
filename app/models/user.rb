@@ -4,5 +4,10 @@ class User < ApplicationRecord
 
   has_many :incidents
 
-  validates :first_name, :last_name, presence: true
+  mount_uploader :avatar, AvatarUploader
+
+  # validates :first_name, :last_name, presence: true
+
+  geocoded_by :address
+  after_validation :geocode
 end

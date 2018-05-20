@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :incidents
+  resources :incidents do
+    get 'resolved', to: 'incidents#resolved'
+  end
 
   post '/texty/send_text' => 'texty#send_text'
 

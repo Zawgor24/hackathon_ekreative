@@ -1,0 +1,9 @@
+= form_for @user do |f|
+  = f.file_field :avatar
+  br
+
+  | Address:
+  = f.text_field :address
+  br
+
+  = f.submit

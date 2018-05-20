@@ -1,0 +1,351 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap";
+
+.pagination>li>a, .pagination>li>span { border-radius: 50% !important;margin: 0 5px;}
+
+.alert {
+  margin-left: 12%;
+}
+
+.sign-in-footer {
+  border-top: 1px solid#888;
+  padding-top:15px;
+  font-size:85%;
+}
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+.aricle-show {
+  background-color: white;
+}
+
+.article-header {
+  margin-bottom: 15px;
+}
+
+.post-title {
+  font-size: 50px;
+  font-style: italic;
+  text-align: center;
+}
+
+.panel.panel-default {
+  width: 80%;
+}
+
+.panel-body {
+  padding-top: 30px;
+}
+
+.red {
+  background-color: red;
+}
+
+.battery-category {
+  margin-top: 25%;
+  font-size: 250px;
+}
+
+.message-form {
+  left: 45%;
+}
+
+.conversation-userpic img {
+  width: 15%;
+  margin-right: 20px;
+  margin-left: 10px;
+  float: left;
+}
+
+.form-group {
+  margin-top: 10px;
+}
+
+.reg-footer {
+  border-top: 1px solid #999;
+  padding-top: 20px;
+}
+
+.sign-in-footer {
+  border-top: 1px solid#888;
+  padding-top:15px;
+  font-size: 85%;
+}
+
+.width-card {
+  width: 20rem;
+}
+
+.profile-content {
+  font-size: 18px;
+}
+
+.tag_cloud {
+  margin-top: 2em;
+}
+
+.subnav {
+  list-style: none;
+  padding-left: 0;
+}
+
+.comment-size {
+  font-size: 28px;
+}
+
+.delete-con {
+  float: right;
+}
+
+.nested_nav {
+  padding-left: 1em;
+}
+
+.comment {
+  margin: 7px 20px 20px 20px;
+  background-color: Lavender;
+}
+
+.logout {
+  float: right;
+  background-color: #3e3d48;
+  border-color: blue;
+}
+
+.login-link {
+  float: right;
+  font-size: 85%;
+  position: relative;
+  top: -10px;
+}
+
+.follow {
+  float: right;
+  border-color: blue;
+}
+
+.followers {
+  margin-left: 15%;
+}
+
+.news {
+  margin-left: 15%;
+}
+
+.leftimg {
+  float: left;
+  margin: 7px 20px 7px 20px;
+}
+
+.logout {
+  float: right;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+html, body {
+    height: 100%;
+}
+
+.empty-post {
+  margin-bottom: 10%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  background-color: Lavender;
+}
+
+.margin-conversation {
+  margin: 1.5px 1.5px 1.5px 1.5px;
+}
+
+.panel-heading {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.panel {
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 3px solid transparent;
+  border-color: #bce8f1;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.panel-heading {
+  font-size: 22px;
+}
+
+.input-group-addon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  color: #555;
+  text-align: center;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.indent-bottom {
+  margin-bottom: 25px;
+}
+
+#btn-fblogin {
+  margin-left: 20px;
+}
+
+#loginform {
+  float: center;
+}
+
+
+.center {
+  margin-left: 35%;
+}
+
+.profile-user{
+  margin-top: 120px;
+}
+
+body{
+  margin-top: 80px;
+  background-color: Lavender;
+}
+
+.profile {
+  margin: 20px 0;
+}
+
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fff;
+}
+
+.profile-userpic img {
+  float: none;
+  margin-left: 25%;
+  width: 50%;
+  height: 50%;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
+}

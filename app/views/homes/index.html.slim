@@ -1,3 +1,20 @@
-.h1
-  | Hi hackathon we are Ergoserv team!
+.center
+  = image_tag('logo.png')
+
+= link_to 'Find', new_incident_path, class: "btn btn-danger"
+
+/ .col-7.aricle-show
+/   .row
+/     .col.mb-2
+/       .card.text-center
+/         .card-header
+/           .article-picture
+        /     = show_image(article)
+        / .card-body
+        /   h2.card-title
+        /     = link_to article.title, article
+        /   p.card-text
+        /     = limit_body(article)
+        / .card-footer.text-muted
+        /   = t('messages.time_ago', time: time_ago_in_words(article.updated_at))
 

@@ -1,12 +1,11 @@
 class IncidentsController < ApplicationController
-  before_action :find_incident, except: %i[new create]
+  before_action :find_incident, except: %i[new create index]
 
   def index
-    @incidents = Incident.all
+    @incidents = Incident.all.order(updated_at: :desc)
   end
 
   def show
-
   end
 
   def new
@@ -14,7 +13,7 @@ class IncidentsController < ApplicationController
   end
 
   def create
-    @incident = User.first.incidents.new(incident_params)
+    @incident = current_user.incidents.new(incident_params)
 
     if @incident.save
       send_text
@@ -35,6 +34,10 @@ class IncidentsController < ApplicationController
     @phone.send_sms(current_user, @incident)
   end
 
+  def resolved
+
+  end
+
   private
 
   def find_incident
@@ -42,6 +45,6 @@ class IncidentsController < ApplicationController
   end
 
   def incident_params
-    params.require(:incident).permit(:name, :height, :age, :info, :user_id)
+    params.require(:incident).permit(:name, :height, :age, :info, :user_id, :avatar)
   end
 end

@@ -1,0 +1,34 @@
+.conteiner
+  .row
+    .col-2
+    .col-lg-7
+      .aricle-show
+        p.text-right.mr-2.mt-2
+        .delete-con.mr-3.mt-3
+          = link_to t('.delete'), @incident, method: :delete,
+              data: { confirm: t('confirm') }, class: 'btn btn-danger'
+        h1.mt-4.ml-4
+          = "Search request by #{ time_ago_in_words(@incident.updated_at) }"
+        hr
+        .text-center
+          = image_tag(@incident.avatar_url) if @incident.avatar.present?
+        hr
+        .lead.ml-4h4
+          .card-text
+            h4.card-text
+            = "Height - #{@incident.height}"
+            hr.mb-2
+            = "Age - #{@incident.age}"
+            hr.mb-2
+            = "Additional information - #{@incident.info}"
+            hr.mb-2
+            = "Status - #{@incident.info}"
+        / .row
+        /   .col-2
+        /   .col-8
+        /     .card.my-4
+        /       h5.card-header = t('.comment')
+        /       .card-body
+        /         = render 'comments/form', commentable: article
+
+        /   = render comments
